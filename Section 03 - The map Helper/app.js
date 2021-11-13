@@ -13,5 +13,17 @@ let doubled = numbers.map(function(number) {
   return number * 2;
 });
 
-console.log(doubled);
+// console.log(doubled);
+
+// The map helper continued
+var cars = [
+  { model: 'Buick', price: 'CHEAP'},
+  { model: 'Camaro', price: 'expensive'}
+];
+
+var prices = cars.map(function(car) {
+  return car.price;
+});
+
+console.log(prices);
 
