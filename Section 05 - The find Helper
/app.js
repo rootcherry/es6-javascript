@@ -55,4 +55,19 @@ function postForComment(posts, comment) {
   });
 }
 
-console.log(postForComment(posts, comment));
+// console.log(postForComment(posts, comment));
+
+// Using find to search for users
+
+const posts = [
+  { id: 1, title: 'Post title'},
+  { id: 2, title: 'Post title'},
+  { id: 3, title: 'Post title'},
+  { id: 4, title: 'Post title'},
+  { id: 5, title: 'Post title'},
+  { id: 6, title: 'Post title'}
+];
+
+const postId = getIdFromURL();
+
+posts.find(post => post.id === postId);
