@@ -19,19 +19,31 @@ for (var i = 0; i < computers.length; i++) {
   }
 }
 
-console.log("---");
-console.log(allComputersCanRunProgram);
-console.log(onlySomeComputersCanRunProgram);
-console.log("+++");
+// console.log("---");
+// console.log(allComputersCanRunProgram);
+// console.log(onlySomeComputersCanRunProgram);
+// console.log("+++");
 
 var eve = computers.every(function(computer) {
   return computer.ram > 16;
 });
 
-console.log(eve);
+// console.log(eve);
 
 var som = computers.some(function(computer) {
   return computer.ram > 16;
 });
 
-console.log(som);
+// console.log(som);
+
+// every and some syntax
+
+var names = ["Alexandria", "Matthew", "Joe"];
+
+names.every(function(name) {
+  return name.length > 4;
+});
+
+names.some(function(name) {
+  return name.length > 4;
+});
