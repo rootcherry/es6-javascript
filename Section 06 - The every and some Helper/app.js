@@ -24,8 +24,14 @@ console.log(allComputersCanRunProgram);
 console.log(onlySomeComputersCanRunProgram);
 console.log("+++");
 
-var ev = computers.every(function(computer) {
+var eve = computers.every(function(computer) {
   return computer.ram > 16;
 });
 
-console.log(ev);
+console.log(eve);
+
+var som = computers.some(function(computer) {
+  return computer.ram > 16;
+});
+
+console.log(som);
