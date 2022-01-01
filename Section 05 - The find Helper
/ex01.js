@@ -9,5 +9,3 @@ var users = [
 var admin = users.find(function(user) {
   return user.admin === 'true';
 });
-
-
