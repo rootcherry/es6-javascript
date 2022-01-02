@@ -8,3 +8,5 @@ function getMessage() {
 }
 
 getMessage();
+
+// when to reach for template strings
