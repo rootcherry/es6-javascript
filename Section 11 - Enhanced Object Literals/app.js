@@ -21,3 +21,18 @@ const bookShop = createBookShop(inventory);
 
 bookShop.inventoryValue();
 bookShop.priceForTitle('Harry Potter');
+
+// when to use enhanced literals?
+
+function saveFile(url, data) {
+  $.ajax({ 
+    url,
+    data,
+    method: 'POST'
+  });
+}
+
+const url = 'http://fileupload.com';
+const data = { color: 'red' };
+
+saveFile(url, data);
