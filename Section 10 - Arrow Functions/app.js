@@ -2,19 +2,19 @@
 
 // ES5
 
-const add = function(a, b) {
+const add1 = function(a, b) {
   return a + b;
 }
 
-add(1, 2);
+// add1(1, 2);
 
 // ES6
 
-const add = (a, b) => {  // const add = (a, b) => a + b;
+const add2 = (a, b) => {  // const add = (a, b) => a + b;
   return a + b;
 }
 
-add(1, 2);
+// add2(1, 2);
 
 // advanced use of arrow functions
 
@@ -32,8 +32,11 @@ const team = {
   members: ['Jane', 'Bill'],
   teamName: 'Super Squad',
   teamSummary: function() {
-    return this.members.map(function(member) {
+    //this === team
+    return this.members.map((member) => {
       return `${member} is on team ${this.teamName}`;
     });
   }
 };
+
+console.log(team.teamSummary());
