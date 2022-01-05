@@ -67,7 +67,7 @@ const companies2 = [
 // const [{ location }] = companies2;
 
 const Google = {
-  locations: ['Mountain View', 'New York', 'London'];
+  locations: ['Mountain View', 'New York', 'London']
 };
 
 const { locations: [ location ] } = Google;
@@ -88,3 +88,21 @@ const user = {
 };  
 
 signup(user);
+
+// more on when to use destructuring
+
+const points = [
+  [4, 5],
+  [10, 1],
+  [0, 40]
+];
+
+// [
+//   { x: 4, y: 5 },
+//   { x: 10, y: 1 },
+//   { x: 0, y: 40 }
+// ];
+
+points.map(([ x, y ]) => {
+  return { x, y };
+});
