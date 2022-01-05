@@ -31,3 +31,21 @@ function validateShoppingList(...items) {
 }
 
 validateShoppingList('oranges', 'bread', 'eggs');
+
+// look to use rest and spread in this case
+
+const MathLibrary = {
+  calculateProduct(a, b) {
+    return a * b;
+  }
+};
+
+const MathLibrary = {
+  calculateProduct(...rest) {
+    console.log('Please use the multiply method instead');
+    return this.multiply(...rest);
+  },
+  multiply(a, b) {
+    return a * b;
+  }
+};
