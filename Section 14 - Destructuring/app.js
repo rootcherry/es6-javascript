@@ -71,3 +71,20 @@ const Google = {
 };
 
 const { locations: [ location ] } = Google;
+
+// when to use destructuring?
+
+function signup({ username, password, email, dateOfBirth, city }) {
+  // create new user
+
+}
+
+const user = {
+  username: 'myname',
+  password: 'mypassword',
+  email: 'myemail@example.com',
+  dateOfBirth: '1/1/1990',
+  city: 'New York'
+};  
+
+signup(user);
