@@ -46,5 +46,28 @@ const companies = [
 ];
 
 const [ name ] = companies;
+const [ name, ...rest ] = companies;
 
 const firstCompany = companies[0];
+
+// destructuring arrays and objects at the same time
+
+const companies2 = [
+  { name: 'Google', location: 'Mountain View' },
+  { name: 'Facebook', location: 'Menlo Park' },
+  { name: 'Uber', location: 'San Francisco' }
+];
+
+// ES5
+
+// var location = companies[0].location; // google location?
+
+// ES6
+
+// const [{ location }] = companies2;
+
+const Google = {
+  locations: ['Mountain View', 'New York', 'London'];
+};
+
+const { locations: [ location ] } = Google;
