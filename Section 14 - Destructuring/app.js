@@ -14,3 +14,25 @@ var expense = {
 // const { amount } = expense;
 
 const { type, amount } = expense;
+
+// destructuring arguments object
+
+// ES5
+
+var saveFiled = {
+  extension: 'jpg',
+  name: 'repost',
+  size: 14040
+};
+
+function fileSummary(file) {
+  return `The file ${file.name}.${file.extension} is of size ${file.size}`;
+}
+
+fileSummary(saveFiled);
+
+// ES6
+
+function fileSummary({ name, extension, size }) {
+  return `The file ${name}.${extension} is of size ${size}`;
+}
