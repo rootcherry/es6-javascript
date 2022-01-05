@@ -36,3 +36,15 @@ fileSummary(saveFiled);
 function fileSummary({ name, extension, size }) {
   return `The file ${name}.${extension} is of size ${size}`;
 }
+
+// destructuring arrays
+
+const companies = [
+  'Google',
+  'Twitter',
+  'Instagram'
+];
+
+const [ name ] = companies;
+
+const firstCompany = companies[0];
