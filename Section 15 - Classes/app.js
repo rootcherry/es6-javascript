@@ -28,7 +28,23 @@ Toyota.prototype.honk = function() {
 }
 
 const toyota = new Toyota({ color: 'red', title: 'Daily Driver' });
-console.log('---');
-console.log(toyota);
-console.log(toyota.drive());
-console.log(toyota.honk());
+// console.log('---');
+// console.log(toyota);
+// console.log(toyota.drive());
+// console.log(toyota.honk());
+
+// refactoring with classes
+
+class Car2 {
+  constructor({ title }) {
+    this.title = title;
+  }
+
+  drive() {
+    return 'vroom';
+  }
+}
+
+const car2 = new Car2({ title: 'Toyota' });
+console.log(car2);
+console.log(car2.drive());
