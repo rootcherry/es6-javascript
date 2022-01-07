@@ -3,7 +3,7 @@
 const colors = ['red', 'green', 'blue'];
 
 for (let color of colors) {
-  console.log(color);
+  // console.log(color);
 }
 
 const numbers = [1, 2, 3, 4];
@@ -14,4 +14,14 @@ for (let number of numbers) {
   total += number;
 }
 
-console.log(total);
+// console.log(total);
+
+// introduction to generators
+
+function* numbers() {
+  yield;
+}
+
+const gen = numbers();
+gen.next();
+gen.next();
