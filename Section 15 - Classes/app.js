@@ -67,3 +67,25 @@ console.log('---');
 console.log(toyota2.honk());
 console.log(toyota2.drive());
 console.log(toyota2);
+
+// when to use classes
+
+React.createClass({
+  doSomething() {
+
+  },
+
+  doSomethingElse() {
+
+  }
+});
+
+class MyComponent extends Component {
+  doSomething() {
+
+  }
+
+  doSomethingElse() {
+
+  }
+}
