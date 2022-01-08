@@ -21,4 +21,5 @@ url = "https://jsonplaceholder.typicode.com/posts/";
 fetch(url)
   // .then(data => console.log(data))
   .then(response => response.json())
-  .then(data => console.log(data));
+  // .then(data => console.log(data));
+  .catch(error => console.log('BAD', error));
