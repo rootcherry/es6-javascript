@@ -94,6 +94,8 @@ function* TeamIterator(team) {
   yield team.lead;
   yield team.manager;
   yield team.engineering;
+  const TestingTeamGenerator = TestingTeamIterator(team.testingTeam);
+  yield* TestingTeamGenerator;
 }
 
 function* TestingTeamIterator(team) {
