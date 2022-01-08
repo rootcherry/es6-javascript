@@ -14,3 +14,11 @@ promise
   .then(() => console.log('i was also ran!!!'))
   .catch(() => console.log('uh oh!!'));
 
+// ajax requests with fetch
+
+url = "https://jsonplaceholder.typicode.com/posts/";
+
+fetch(url)
+  // .then(data => console.log(data))
+  .then(response => response.json())
+  .then(data => console.log(data));
