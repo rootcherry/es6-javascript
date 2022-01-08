@@ -72,7 +72,7 @@ for (let color of colors()) {
   myColors.push(color);
 }
 
-console.log(myColors);
+// console.log(myColors);
 
 // a pratical use of ES6 generators
 
@@ -106,4 +106,22 @@ for (let name of engineeringTeam) {
   names.push(name);
 }
 
-console.log(names);
+// console.log(names);
+
+// generators with recursion
+
+class Comment {
+  constructor(content, children) {
+    this.content = content;
+    this.children = children;
+  }
+}
+
+const children = [
+  new Comment('good comment', []),
+  new Comment('bad comment', []),
+  new Comment('meh', [])
+];
+
+const tree = new Comment('Great post!', children);
+console.log(tree);
