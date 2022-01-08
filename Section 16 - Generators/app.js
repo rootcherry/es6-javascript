@@ -78,8 +78,12 @@ console.log(myColors);
 
 const testingTeam = {
   lead: 'Amanda',
-  tester: 'Bill'
-}
+  tester: 'Bill',
+  [Symbol.iterator]: function* () {
+    yield this.lead;
+    yield this.tester;
+  }
+};
 
 const engineeringTeam = {
   testingTeam,
@@ -94,13 +98,7 @@ function* TeamIterator(team) {
   yield team.lead;
   yield team.manager;
   yield team.engineering;
-  const TestingTeamGenerator = TestingTeamIterator(team.testingTeam);
-  yield* TestingTeamGenerator;
-}
-
-function* TestingTeamIterator(team) {
-  yield team.lead;
-  yield team.tester;
+  yield* team.testingTeam;
 }
 
 const names = [];
