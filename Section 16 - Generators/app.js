@@ -76,7 +76,13 @@ console.log(myColors);
 
 // a pratical use of ES6 generators
 
+const testingTeam = {
+  lead: 'Amanda',
+  tester: 'Bill'
+}
+
 const engineeringTeam = {
+  testingTeam,
   size: 3,
   department: 'Engineering',
   lead: 'Jill',
@@ -88,6 +94,11 @@ function* TeamIterator(team) {
   yield team.lead;
   yield team.manager;
   yield team.engineering;
+}
+
+function* TestingTeamIterator(team) {
+  yield team.lead;
+  yield team.tester;
 }
 
 const names = [];
